@@ -20,6 +20,12 @@ create table if not exists Sborniki(
 	name VARCHAR(60) not NULL
 );
 
+alter table Sborniki rename column track_id to name
+
+alter table Sborniki alter column name VARCHAR(60)
+
+
+
 
 --Один к многим
 create table if not exists Tracklist(
