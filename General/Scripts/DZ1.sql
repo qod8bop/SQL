@@ -20,9 +20,13 @@ create table if not exists Sborniki(
 	name VARCHAR(60) not NULL
 );
 
-alter table Sborniki rename column track_id to name
+alter table sborniki 
+	add column year INT
 
-alter table Sborniki alter column name VARCHAR(60)
+
+ALTER TABLE Sborniki 
+    ALTER COLUMN name TYPE VARCHAR(80) 
+    USING name::VARCHAR(80);
 
 
 
